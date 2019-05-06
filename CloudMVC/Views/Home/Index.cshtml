@@ -1,0 +1,281 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Cloud MVC</title>
+
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="~/img/favicon.png">
+    <link rel="apple-touch-icon" href="~/img/icon57.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="~/img/icon72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="~/img/icon76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="~/img/icon114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="~/img/icon120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="~/img/icon144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="~/img/icon152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="~/img/icon180.png" sizes="180x180">
+    <!-- END Icons -->
+    <!-- Stylesheets -->
+    <!-- Bootstrap is included in its original form, unaltered -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+
+    <!-- Related styles of various icon packs and plugins -->
+    <link rel="stylesheet" href="~/css/plugins.css">
+
+    <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+    <link rel="stylesheet" href="~/css/main.css">
+
+    <!-- Include a specific file here from css/themes/ folder to alter the default theme of the template -->
+    <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+    <link rel="stylesheet" href="~/css/themes.css">
+
+    @*<link rel="stylesheet" href="~/css/themes/modern.css">*@
+
+    <!-- END Stylesheets -->
+    <!-- Modernizr (browser feature detection library) -->
+    <script src="~/js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+
+    <div id="page-wrapper">
+
+        <div class="preloader themed-background">
+            <h1 class="push-top-bottom text-light text-center"><strong>Cloud</strong>MVC</h1>
+            <div class="inner">
+                <h3 class="text-light visible-lt-ie10"><strong>Loading..</strong></h3>
+                <div class="preloader-spinner hidden-lt-ie10"></div>
+            </div>
+        </div>
+
+        <div id="page-container" class="header-fixed-top sidebar-partial sidebar-visible-lg sidebar-no-animations footer-fixed">
+
+            <!-- Main Sidebar -->
+            <div id="sidebar">
+                <!-- Wrapper for scrolling functionality -->
+                <div id="sidebar-scroll">
+                    <!-- Sidebar Content -->
+                    <div class="sidebar-content">
+                        <!-- Brand -->
+                        <a href="@Url.Action("Index", "Home")" class="sidebar-brand">
+                            <i class="gi gi-flash"></i><span class="sidebar-nav-mini-hide"><strong>Cloud</strong>MVC</span>
+                        </a>
+                        <!-- END Brand -->
+                        <!-- User Info -->
+                        <div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
+                            <div class="sidebar-user-avatar">
+                                <img src="~/img/placeholders/avatars/avatar2.jpg" alt="avatar">
+                            </div>
+                            <div class="sidebar-user-name">User Name</div>
+                        </div>
+
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="@Url.Action("Index", "Home")" class="@Url.IsLinkActive("Index", "Home")"><i class="gi gi-home sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Home</span></a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Customers")" class="@Url.IsLinkActive("Index", "Customers")"><i class="gi gi-group sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Customers</span></a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Orders")" class="@Url.IsLinkActive("Index", "Orders")"><i class="gi gi-shopping_cart sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Orders</span></a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "OrderDetails")" class="@Url.IsLinkActive("Index", "OrderDetails")"><i class="gi gi-shopping_bag sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Order Details</span></a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Products")" class="@Url.IsLinkActive("Index", "Products")"><i class="gi gi-gift sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Products</span></a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Categories")" class="@Url.IsLinkActive("Index", "Categories")"><i class="gi gi-cargo sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Categories</span></a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Shippers")" class="@Url.IsLinkActive("Index", "Shippers")"><i class="gi gi-cars sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Shippers</span></a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Countries")" class="@Url.IsLinkActive("Index", "Countries")"><i class="gi gi-flag sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Countries</span></a>
+                            </li>
+                        </ul>
+                        <!-- END Sidebar Navigation -->
+
+
+                    </div>
+                    <!-- END Sidebar Content -->
+                </div>
+                <!-- END Wrapper for scrolling functionality -->
+            </div>
+            <!-- END Main Sidebar -->
+            
+            <!-- Main Container -->
+            <div id="main-container">
+
+                <header class="navbar navbar-default navbar-fixed-top">
+                    <!-- Left Header Navigation -->
+                    <ul class="nav navbar-nav-custom">
+                        <!-- Main Sidebar Toggle Button -->
+                        <li>
+                            <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');this.blur();">
+                                <i class="fa fa-bars fa-fw"></i>
+                            </a>
+                        </li>
+                        <!-- END Main Sidebar Toggle Button -->
+                        <!-- END Template Options -->
+                    </ul>
+                    <!-- END Left Header Navigation -->
+                </header>
+
+                <!-- Page content -->
+                <div id="page-content">
+
+                    <div class="block full block-alt-noborder">
+                        <div class="content-header content-header-media">
+                            <div class="header-section">
+                                <div class="row">
+                                    <!-- Main Title (hidden on small devices for the statistics to fit) -->
+                                    <div class="col-md-4 col-lg-6 hidden-xs hidden-sm">
+                                        <h1>Welcome <strong>Guest</strong><br><small>You Look Awesome!</small></h1>
+                                    </div>
+                                    <!-- END Main Title -->
+                                </div>
+                            </div>
+                            <!-- For best results use an image with a resolution of 2560x248 pixels (You can also use a blurred image with ratio 10:1 - eg: 1000x100 pixels - it will adjust and look great!) -->
+                            <img src="~/img/placeholders/headers/login_header.jpg" alt="header image" class="animation-pulseSlow">
+                        </div>
+                    </div>
+
+                    <!-- Mini Top Stats Row -->
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <!-- Widget -->
+                            <div class="widget fa-border">
+                                <div class="widget-simple">
+                                    <div class="widget-icon pull-left themed-background-autumn animation-fadeIn">
+                                        <i class="gi gi-group"></i>
+                                    </div>
+                                    <h3 class="widget-content text-right animation-pullDown">
+                                        <strong>25.256</strong><br>
+                                        <small>Customers</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- END Widget -->
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <!-- Widget -->
+                            <div class="widget fa-border">
+                                <div class="widget-simple">
+                                    <div class="widget-icon pull-left themed-background-spring animation-fadeIn">
+                                        <i class="gi gi-shopping_cart"></i>
+                                    </div>
+                                    <h3 class="widget-content text-right animation-pullDown">
+                                        <strong>85.250</strong><br>
+                                        <small>Orders</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- END Widget -->
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <!-- Widget -->
+                            <div class="widget fa-border">
+                                <div class="widget-simple">
+                                    <div class="widget-icon pull-left themed-background-fire animation-fadeIn">
+                                        <i class="gi gi-gift"></i>
+                                    </div>
+                                    <h3 class="widget-content text-right animation-pullDown">
+                                        <strong>68.415</strong>
+                                        <small>Products</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- END Widget -->
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <!-- Widget -->
+                            <div class="widget fa-border">
+                                <div class="widget-simple">
+                                    <div class="widget-icon pull-left themed-background-amethyst animation-fadeIn">
+                                        <i class="gi gi-flag"></i>
+                                    </div>
+                                    <h3 class="widget-content text-right animation-pullDown">
+                                        <strong>15</strong>
+                                        <small>Countries</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- END Widget -->
+                        </div>
+
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="widget fa-border">
+                                <div class="widget-extra themed-background">
+                                    <h4 class="widget-content-light"><strong>Pending</strong> Orders</h4>
+                                </div>
+                                <div class="widget-extra-full"><span class="h2 animation-expandOpen">3</span></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="widget fa-border">
+                                <div class="widget-extra themed-background-dark">
+                                    <h4 class="widget-content-light"><strong>Orders</strong> Today</h4>
+                                </div>
+                                <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">120</span></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="widget fa-border">
+                                <div class="widget-extra themed-background-dark">
+                                    <h4 class="widget-content-light"><strong>Orders</strong> This Month</h4>
+                                </div>
+                                <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">3.200</span></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="widget fa-border">
+                                <div class="widget-extra themed-background-dark">
+                                    <h4 class="widget-content-light"><strong>Orders</strong> Last Month</h4>
+                                </div>
+                                <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen">2.850</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Mini Top Stats Row -->
+
+                </div>
+
+                <footer class="clearfix">
+                    <div class="pull-right">
+                        Created with <i class="fa fa-heart text-danger"></i> by Cezar
+                    </div>
+                    <div class="pull-left">
+                        <p>Copyright @DateTime.Now.Year &copy; RaZec. All rights reserved</p>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code -->
+    <script src="~/js/vendor/jquery.min.js"></script>
+    <script src="~/js/vendor/bootstrap.min.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <script src="~/js/app.js"></script>
+
+</body>
+</html>

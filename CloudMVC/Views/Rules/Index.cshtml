@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CloudMVC.Rules>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-striped table-vcenter">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RuleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pages.Url)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RuleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pages.Url)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RuleID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RuleID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RuleID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,34 @@
+﻿@model CloudMVC.Autorization
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Autorization</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customers.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customers.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rules.RuleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rules.RuleName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AutorizationID }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-sm btn-danger" })
+</p>

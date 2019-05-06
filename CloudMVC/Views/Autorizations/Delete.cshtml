@@ -1,0 +1,40 @@
+﻿@model CloudMVC.Autorization
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Autorization</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customers.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customers.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rules.RuleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rules.RuleName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-sm btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-sm btn-danger" })
+        </div>
+    }
+</div>

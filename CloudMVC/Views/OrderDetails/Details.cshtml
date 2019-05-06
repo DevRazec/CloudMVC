@@ -1,0 +1,122 @@
+﻿@model CloudMVC.OrderDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SortShipper)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SortShipper)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SortProduct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SortProduct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefaultPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefaultPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Increase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Increase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCustomer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCustomer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Orders.Observation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orders.Observation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shippers.ShipperName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shippers.ShipperName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderDetailID }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-sm btn-danger" })
+</p>

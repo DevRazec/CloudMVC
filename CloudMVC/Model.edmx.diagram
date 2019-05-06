@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="117284057b144997b63226d614751038" Name="Diagram1">
+        <EntityTypeShape EntityType="clouddbModel.Autorization" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Categories" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Countries" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Customers" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.OrderDetails" Width="1.5" PointX="10.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.OrderNumbers" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Orders" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Pages" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Products" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Rules" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="clouddbModel.Shippers" Width="1.5" PointX="8.25" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="clouddbModel.FK_Autorization_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_Autorization_Rules" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_Customers_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_Orders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_OrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_OrderDetails_Shippers" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_Orders_OrderNumbers" ManuallyRouted="false" />
+        <AssociationConnector Association="clouddbModel.FK_Rules_Pages" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

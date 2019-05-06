@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CloudMVC.Orders>
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+<p>
+    <a href="@Url.Action("Create", "Orders")" class="btn btn-success"><span>Create New</span></a>
+</p>
+
+<table class="table table-bordered table-striped table-vcenter">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalDiscount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalIncrease)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrandTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCustomer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customers.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderNumbers.OrderNumber)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalIncrease)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GrandTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customers.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderNumbers.OrderNumber)
+            </td>
+            <td>
+                <div class="btn-group btn-group-xs">
+                    <a href="@Url.Action("Edit", "Orders", new { id = item.OrderID })" class="btn btn-sm btn-warning" title="Edit"><i class="fa fa-pencil"></i></a>
+
+                    <a href="@Url.Action("Details", "Orders", new { id = item.OrderID })" class="btn btn-sm btn-info" title="Details"><i class="fa fa-eye"></i></a>
+
+                    <a href="@Url.Action("Delete", "Orders", new { id = item.OrderID })" class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-times"></i></a>
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

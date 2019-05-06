@@ -1,0 +1,109 @@
+﻿@model IEnumerable<CloudMVC.OrderDetails>
+
+@{
+    ViewBag.Title = "Order Details";
+}
+
+<p>
+    <a href="@Url.Action("Create", "OrderDetails")" class="btn btn-success"><span>Create New</span></a>
+</p>
+
+<table class="table table-bordered table-striped table-vcenter">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SortShipper)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SortProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefaultPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Increase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCustomer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orders.Observation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shippers.ShipperName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SortShipper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SortProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Increase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Orders.Observation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Products.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shippers.ShipperName)
+            </td>
+            <td>               
+                <div class="btn-group btn-group-xs">
+                    <a href="@Url.Action("Edit", "OrderDetails", new { id = item.OrderDetailID })" class="btn btn-sm btn-warning" title="Edit"><i class="fa fa-pencil"></i></a>
+
+                    <a href="@Url.Action("Details", "OrderDetails", new { id = item.OrderDetailID })" class="btn btn-sm btn-info" title="Details"><i class="fa fa-eye"></i></a>
+
+                    <a href="@Url.Action("Delete", "OrderDetails", new { id = item.OrderDetailID })" class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-times"></i></a>
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

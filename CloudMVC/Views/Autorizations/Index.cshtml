@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CloudMVC.Autorization>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-striped table-vcenter">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customers.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rules.RuleName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customers.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rules.RuleName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AutorizationID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.AutorizationID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.AutorizationID })
+            </td>
+        </tr>
+    }
+
+</table>

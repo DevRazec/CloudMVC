@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CloudMVC.Categories>
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+<p>
+    <a href="@Url.Action("Create", "Categories")" class="btn btn-success"><span>Create New</span></a>
+</p>
+
+<table class="table table-bordered table-striped table-vcenter">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefaultPrice)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultPrice)
+            </td>
+            <td>               
+                <div class="btn-group btn-group-xs">
+                    <a href="@Url.Action("Edit", "Categories", new { id = item.CategoryID })" class="btn btn-sm btn-warning" title="Edit"><i class="fa fa-pencil"></i></a>
+
+                    <a href="@Url.Action("Details", "Categories", new { id = item.CategoryID })" class="btn btn-sm btn-info" title="Details"><i class="fa fa-eye"></i></a>
+
+                    <a href="@Url.Action("Delete", "Categories", new { id = item.CategoryID })" class="btn btn-sm btn-danger" title="Delete"><i class="fa fa-times"></i></a>
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
